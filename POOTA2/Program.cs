@@ -29,7 +29,7 @@ namespace POOTA2
             universidad u = new universidad(nombresCarreras);
             u.GenerarDatosAleatorios(1_000_000, 3_000_000);
 
-            Console.WriteLine("=== TOTALES Y PROMEDIOS POR SEMESTRE (todas las carreras) ===");
+            Console.WriteLine("███ TOTALES Y PROMEDIOS POR SEMESTRE (todas las carreras) ███");
             long[] totalesSem = u.TotalesPorSemestre();
             double[] promediosSem = u.PromediosPorSemestre();
 
@@ -38,17 +38,17 @@ namespace POOTA2
                 Console.WriteLine($"Semestre {i + 1}: Total = {totalesSem[i]:N0} | Promedio = {promediosSem[i]:N2}");
             }
 
-            Console.WriteLine("\n=== COSTOS POR CARRERA (DESCENDENTE) ===");
+            Console.WriteLine("\n███ COSTOS POR CADA CARRERA (Descendente) ███");
             Carrera[] ordenadas = u.CarrerasOrdenadasPorCostoDesc();
             foreach (var c in ordenadas)
             {
                 Console.WriteLine($"Código {c.Codigo:00} - {c.Nombre}: Total = {c.Total():N0}");
             }
 
-            Console.WriteLine($"\n=== COSTO GLOBAL UNIVERSIDAD ===\n{u.CostoGlobal():N0}");
+            Console.WriteLine($"\n███ COSTO GLOBAL UNIVERSIDAD ███\n{u.CostoGlobal():N0}");
 
             int semMenor = u.SemestreMenosCuantioso();
-            Console.WriteLine($"\n=== SEMESTRE MENOS CUANTIOSO ===\nSemestre {semMenor} (Total = {totalesSem[semMenor - 1]:N0})");
+            Console.WriteLine($"\n███ SEMESTRE MENOS CUANTIOSO ███\nSemestre {semMenor} (Total = {totalesSem[semMenor - 1]:N0})");
 
             Console.WriteLine("\nPresiona una tecla para salir...");
             Console.ReadKey();

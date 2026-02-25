@@ -10,7 +10,7 @@ namespace POOTA2
     {
         public int Codigo { get; }
         public string Nombre { get; }
-        private int[] costosSemestre; // 10 semestres
+        private int[] costosSemestre;
 
         public Carrera(int codigo, string nombre)
         {

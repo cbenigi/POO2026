@@ -18,7 +18,7 @@ namespace POOTA2
 
             for (int i = 0; i < 12; i++)
             {
-                int codigo = i + 1; // 1..12
+                int codigo = i + 1; 
                 carreras[i] = new Carrera(codigo, nombresCarreras[i]);
             }
         }
